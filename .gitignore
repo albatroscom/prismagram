@@ -62,4 +62,4 @@ typings/
 generated
 
 # graphql
-*.yml
+prisma.yml
