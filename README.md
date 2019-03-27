@@ -3,7 +3,7 @@ instagram clone by Express + Prisma + Reactjs and React Native
 
 ## User Stories
 - [x] Create Account
-- [ ] Request Secret
+- [x] Request Secret
 - [ ] Confirm Secret (Login)
 - [ ] Like / Unlike a photo
 - [ ] Comment on a photo
