@@ -2654,7 +2654,7 @@ jsonwebtoken@^8.1.0, jsonwebtoken@^8.3.0:
     ms "^2.1.1"
     semver "^5.6.0"
 
-jsonwebtoken@^8.2.0:
+jsonwebtoken@^8.2.0, jsonwebtoken@^8.5.1:
   version "8.5.1"
   resolved "https://registry.yarnpkg.com/jsonwebtoken/-/jsonwebtoken-8.5.1.tgz#00e71e0b8df54c2121a1f26137df2280673bcc0d"
   dependencies:
