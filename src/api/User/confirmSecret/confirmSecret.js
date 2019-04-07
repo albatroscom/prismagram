@@ -8,6 +8,15 @@ export default {
             const user = await prisma.user({ email });
             if(user.loginSecret === secret) {
                 // JWT
+                // User 가 confirm 되면 secret data를 더이상 갱신하지 않는다.
+                await prisma.updateUser({
+                    where: {
+                        id: user.id
+                    },
+                    data: {
+                        loginSecret: ""
+                    }
+                });
                 return generateToken(user.id);
             } else {
                 throw Error("Wrong email/secret combination");
