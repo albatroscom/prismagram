@@ -5,12 +5,13 @@ import logger from 'morgan';
 import schema from './schema';
 import './passport';
 import { authenticateJWT } from './passport';
+import { isAuthenticated } from './middlewares'; // context에 넣게되면 일일이 import하지 않아도 된다.
 
 const PORT = process.env.PORT || 4000;
 
 const server = new GraphQLServer({ 
     schema, 
-    context: ({ request }) => ({ request })
+    context: ({ request }) => ({ request, isAuthenticated })
 });
 
 server.express.use(logger('dev'));
