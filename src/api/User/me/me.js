@@ -3,7 +3,7 @@ import { USER_FRAGMENT } from '../../../fragments';
 
 export default {
     Query: {
-        me: async(_, __, {request, isAuthenticated}) => {
+        me: async(_, __, { request, isAuthenticated }) => {
             isAuthenticated(request);
             const { user } = request;
             const userProfile = await prisma.user({ id: user.id });
