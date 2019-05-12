@@ -1,4 +1,4 @@
-import { prisma } from "../../../generated/prisma-client";
+import { prisma } from "../../generated/prisma-client";
 
 export default {
     User: {
@@ -32,6 +32,26 @@ export default {
             const { user } = request;
             const { id: parentId } = parent;
             return user.id === parentId; // 요청하는 사람(request)이 같으면 내 프로필을 요청하는 것
+        }
+    },
+    Post: {
+        isLiked: async(parent, _, { request }) => {
+            const { user } = request;
+            const { id } = parent;
+            return prisma.$exists.like({
+                AND: [
+                    {
+                        user: {
+                            id: user.id,
+                        }
+                    },
+                    {
+                        post: {
+                            id
+                        }
+                    }
+                ]
+            });
         }
     }
 };

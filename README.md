@@ -7,7 +7,7 @@ instagram clone by Express + Prisma + Reactjs and React Native
 - [x] Create Account
 - [x] Request Secret
 - [x] Confirm Secret (Login)
-- [x] Like / Unlike a photo
+- [x] Like / Unlike a post
 - [x] Comment on a post(photo)
 - [x] Search by user
 - [x] Search by location
@@ -16,7 +16,11 @@ instagram clone by Express + Prisma + Reactjs and React Native
 - [x] Edit my profile
 - [x] See user profile
 - [x] See my profile
-- [x] See the full Photo
-- [ ] Upload a photo
-- [ ] Edit the photo (Delete)
+- [x] See the full Post
+- [ ] Upload a photo(post)
+- [ ] Edit the photo(post) (Delete)
 - [ ] See the feed
+- [ ] See rooms
+- [ ] See room
+- [ ] Send private Message
+- [ ] Receive Message (Realtime)
