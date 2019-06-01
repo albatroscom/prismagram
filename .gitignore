@@ -63,3 +63,6 @@ generated
 
 # graphql
 prisma.yml
+
+# source auto backup
+.history
