@@ -5,12 +5,7 @@ export default {
         seeUser: async(_, args) => {
             // isAuthenticated(request);
             const { id } = args;
-            const user = await prisma.user({ id });
-            const posts = await prisma.user({ id }).posts();
-            return {
-                user, 
-                posts
-            }
+            return prisma.user({ id });
         }
     }
 };
